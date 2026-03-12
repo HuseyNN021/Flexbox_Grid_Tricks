@@ -1,0 +1,28 @@
+
+/* Wrapper */
+.wrapper {
+    background-color: lightcyan;
+    /* repeat() - 2 parametr qəbul edir
+               1ci - neçə element görsənəcək, 5 olsa 5 element görsənəcək hər sütünda
+               2ci - hər elementin width-i                 
+    auto-fit - ekranın/wrapper-in eni nəqədər card tutursa o qədər card göstərir.
+                məsələn wrapper - 1500px, card - 250px 1500/250 = 6
+                hər sütünda 6 card görsənəcək. auto-fit ilə manual column sayı yazmırıq
+    minmax() - ən kiçik ölçü, ən böyük ölçü          
+                
+*/
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+
+/* Card */
+.card {
+    background-color: lightpink;
+    height: 10rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

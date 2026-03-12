@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Navigition-un ortalanması üçün container olan header-a "flex" veririk */
+header{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation-a isə margin-left/right "auto" edirik */
+/* Auto - boşluqları dolduraraq məcburi elementi sıxışdırır */
+nav{
+    /* display: flex; */
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 70vw; */
+}
+
+/* Test  üçün ul içindəki "service" item-ı da ortalayaq ul daxilində */
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    width: 50vw;
+}
+
+nav ul li:nth-child(2){ /* Service*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img{
+    width: 2rem;
+}
+.actions{
+    background-color: lightskyblue;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+

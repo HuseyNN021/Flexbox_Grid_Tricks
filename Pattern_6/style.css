@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wraapper - Section */
+
+section{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1rem;
+}
+
+/* Cards */
+.card{
+    padding: 1rem;
+    background-color: lightyellow;
+    height: 20rem;
+    border-radius: 0.5rem;
+    /* Flex ilə həlli */
+    /* display: flex;
+    flex-direction: column; */
+
+    /* Grid ilə həlli */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    text-align: center;
+    gap: 1rem;
+}
+.card h1{
+    color: lightslategrey;
+}
+
+/* .card p{ */
+    /* Flex ilə həlli */
+    /* flex-grow: 1; */
+/* } */
+
+.card button{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+}

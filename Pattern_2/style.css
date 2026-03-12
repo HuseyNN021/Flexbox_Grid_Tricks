@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    margin: 0;  
+    padding: 0;
+}
+
+/* Example - 1 */
+
+/* Container - section 
+    - "grid areas" tətbiq olunacaq tag 
+    - "columns: 300px 1fr" - bu section 2 columndan ibarət olacaq,
+    birinci column "300px", digəri isə bütün eni "1fr" olduğu üçün    
+    - "grid-template-areas" - string-key-lərdən ibarət olur,
+    layout-un necə olacağını burda təyin edirik
+    - 2 column olduğu üçün öncə navbar 2dəfə yazılıb,
+    yəni navbar bütün eni tutacaq ümumi "eni 300px+1fr"
+    - digərləridə bu şəkildə 
+*/
+section{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "navbar navbar"
+        "aside main"
+        "footer footer"
+    ;
+}
+/* Layout styles */
+#header{
+    background-color: whitesmoke;
+    /* string-key - grid-template-area üçün */
+    grid-area: navbar; 
+    padding: 1rem;
+}
+
+#sidebar{
+    padding: 1rem;
+    color: white;
+    background-color: darkslategrey;
+    /* string-key - grid-template-area üçün */
+    grid-area: aside;
+}
+
+#main{
+    padding: 1rem;
+    background-color: ghostwhite;
+    /* string-key - grid-template-area üçün */
+    grid-area: main;
+}
+#footer{
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    /* string-key - grid-template-area üçün */    
+    grid-area: footer;
+}
+
+
+/* Example - 2 */
+
+/* Grid */
+
+.bentoWrapper{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 20vh 20vh 20vh;
+    grid-template-areas: 
+    "grid1 grid2 grid2"
+    "grid1 grid3 grid4"
+    "grid5 grid5 grid6"
+    ;
+    gap: 1rem;
+}
+
+/* Grids */
+.grid-1{
+    background-color: lightblue;
+    grid-area: grid1;
+}
+.grid-2{
+    background-color: lightcoral;
+    grid-area: grid2;
+}
+.grid-3{
+    background-color: lightgray;
+    grid-area: grid3;
+}
+.grid-4{
+    background-color: lightpink;
+    grid-area: grid4;
+}
+.grid-5{
+    background-color: lightseagreen;
+    grid-area: grid5;
+}
+.grid-6{
+    background-color: lightgreen;
+    grid-area: grid6;
+}
+
+@media (max-width: 768px) {
+    section{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        "navbar navbar"
+        "aside main"
+        "footer footer"
+        ;
+    }
+  
+}
